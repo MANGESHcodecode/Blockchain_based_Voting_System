@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "D:\\CAIS CP\\blockchain-voting\\smart-contract\\contracts\\Voting.sol": {
-      "lastModificationDate": 1774845573637,
-      "contentHash": "d001e6439c195a0424b776c52f51d3cd",
+      "lastModificationDate": 1774976868622,
+      "contentHash": "ad36193cda111446fb368896d4e0234c",
       "sourceName": "contracts/Voting.sol",
       "solcConfig": {
         "version": "0.8.20",

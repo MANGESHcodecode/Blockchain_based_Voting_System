@@ -25,6 +25,8 @@ contract Voting {
     }
     mapping(address => VoteData) public votes;
 
+    event VoteCast(address indexed voter, bytes encryptedBallot);
+
     modifier onlyAuthority() {
         require(msg.sender == authority, "Only authority can perform this action");
         _;
@@ -73,6 +75,7 @@ contract Voting {
         hasVoted[msg.sender] = true;
         votes[msg.sender] = VoteData(encryptedBallot, commitment);
         _totalVotes++;
+        emit VoteCast(msg.sender, encryptedBallot);
     }
     
     function getCandidates() public view returns (Candidate[] memory) {
